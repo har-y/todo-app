@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 const NewTodo = () => {
-  const [newTodo, setNewTodo] = useState('');
+  const [enterNewTodo, setNewTodo] = useState('');
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    console.log(newTodo);
+    console.log(enterNewTodo);
 
     setNewTodo('');
   };
@@ -21,7 +21,7 @@ const NewTodo = () => {
         className="mr-4 w-full appearance-none rounded border-2 px-3 py-2 text-black shadow outline-none hover:border-black"
         type="text"
         placeholder="enter new todo"
-        value={newTodo}
+        value={enterNewTodo}
         required
         onChange={inputChangeHandler}
       />
