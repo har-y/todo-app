@@ -14,7 +14,12 @@ function App() {
   };
 
   const deleTodoHandler = (ID) => {
-    console.log(ID);
+    setUserData((prev) => {
+      const updateTodo = prev.filter((arg) => {
+        return arg.id !== ID;
+      });
+      return updateTodo;
+    });
   };
 
   return (
