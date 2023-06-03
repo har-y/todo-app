@@ -16,9 +16,9 @@ const NewTodo = () => {
   };
 
   return (
-    <form onSubmit={submitHandler} className="flex w-full ">
+    <form onSubmit={submitHandler} className="flex w-full space-x-2">
       <input
-        className="mr-4 w-full appearance-none rounded border-2 px-3 py-2 text-black shadow outline-none hover:border-black"
+        className="w-full appearance-none rounded border-2 px-3 py-2 text-black shadow outline-none hover:border-black"
         type="text"
         placeholder="enter new todo"
         value={enterNewTodo}
