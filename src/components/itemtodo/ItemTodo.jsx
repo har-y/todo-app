@@ -1,9 +1,9 @@
-const ItemTodo = () => {
+const ItemTodo = (props) => {
   return (
     <ul className="w-full pt-5">
-      <li className="flex w-full justify-between">
+      <li className="flex w-full justify-between" id={props.id}>
         <div className="ml-2 mr-5 flex-auto border-b-2 border-neutral-100 border-opacity-100 py-2 dark:border-opacity-50">
-          <p>todo</p>
+          <p>{props.content}</p>
         </div>
         <div className="flex-none space-x-2">
           <button className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black">
