@@ -1,7 +1,11 @@
 const ItemTodo = (props) => {
+  const deleteTodoHandler = () => {
+    props.onDeleteTodo(props.id);
+  };
+
   return (
     <ul className="w-full pt-5">
-      <li className="flex w-full justify-between" id={props.id}>
+      <li className="flex w-full justify-between">
         <div className="ml-2 mr-5 flex-auto border-b-2 border-neutral-100 border-opacity-100 py-2 dark:border-opacity-50">
           <p>{props.content}</p>
         </div>
@@ -9,7 +13,10 @@ const ItemTodo = (props) => {
           <button className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black">
             edit
           </button>
-          <button className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black">
+          <button
+            className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black"
+            onClick={deleteTodoHandler}
+          >
             delete
           </button>
         </div>
