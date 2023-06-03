@@ -1,14 +1,18 @@
 import { useState } from 'react';
 
-const NewTodo = () => {
+const NewTodo = (props) => {
   const [enterNewTodo, setNewTodo] = useState('');
+  const [key, setKey] = useState(3);
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    console.log(enterNewTodo);
+    props.onAddTodo({ id: key, text: enterNewTodo });
 
     setNewTodo('');
+    setKey((prev) => {
+      return prev + 1;
+    });
   };
 
   const inputChangeHandler = (e) => {
