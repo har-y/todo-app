@@ -18,7 +18,7 @@ const EditTodo = (props) => {
   };
 
   return (
-    <div className="ml-2 mr-5 flex-auto border-b-2 border-neutral-100 border-opacity-100 py-2 dark:border-opacity-50">
+    <div className="ml-2  flex-auto border-b-2 border-neutral-100 border-opacity-100 py-2 dark:border-opacity-50">
       <form onSubmit={submitHandler} className="flex w-full ">
         <input
           className="flex-1 appearance-none rounded border-2 px-3 py-2 text-black shadow outline-none hover:border-black"
