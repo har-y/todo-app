@@ -15,10 +15,9 @@ function App() {
 
   const deleteTodoHandler = (ID) => {
     setUserData((prev) => {
-      const updateTodo = prev.filter((arg) => {
+      return prev.filter((arg) => {
         return arg.id !== ID;
       });
-      return updateTodo;
     });
   };
 
