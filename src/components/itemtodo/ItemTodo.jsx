@@ -16,18 +16,16 @@ const ItemTodo = (props) => {
   };
 
   return (
-    <ul className="w-full pt-5">
-      <li className="flex w-full justify-between">
-        {!edit && (
-          <ContentTodo
-            content={props.content}
-            onEditTodo={editHandler}
-            onDeleteTodo={deleteTodoHandler}
-          />
-        )}
-        {edit && <EditTodo onCancelEditTodo={editHandler} />}
-      </li>
-    </ul>
+    <li className="flex w-full justify-between">
+      {!edit && (
+        <ContentTodo
+          content={props.content}
+          onEditTodo={editHandler}
+          onDeleteTodo={deleteTodoHandler}
+        />
+      )}
+      {edit && <EditTodo onCancelEditTodo={editHandler} />}
+    </li>
   );
 };
 

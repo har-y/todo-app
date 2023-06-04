@@ -2,7 +2,7 @@ import ItemTodo from '../itemtodo/ItemTodo';
 
 const ListTodo = (props) => {
   return (
-    <ul className="w-full pt-5">
+    <ul className="w-full space-y-2 pt-5">
       {props.data.map((arg) => {
         return (
           <ItemTodo
