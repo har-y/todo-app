@@ -11,9 +11,15 @@ const EditTodo = (props) => {
     props.onCancelEditTodo();
   };
 
+  const editTodoHandler = () => {
+    props.onEditTodo({ id: props.id, text: enterUpdateTodo });
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
 
+    editTodoHandler();
+    cancelEditTodoHandler();
     setUpdateTodo('');
   };
 

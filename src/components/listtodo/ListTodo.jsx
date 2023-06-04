@@ -10,6 +10,7 @@ const ListTodo = (props) => {
             id={arg.id}
             content={arg.text}
             onAddTodo={props.onAddTodo}
+            onEditTodo={props.onEditTodo}
             onDeleteTodo={props.onDeleteTodo}
           />
         );

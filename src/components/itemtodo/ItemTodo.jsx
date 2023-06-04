@@ -24,7 +24,13 @@ const ItemTodo = (props) => {
           onDeleteTodo={deleteTodoHandler}
         />
       )}
-      {edit && <EditTodo onCancelEditTodo={editHandler} />}
+      {edit && (
+        <EditTodo
+          id={props.id}
+          onEditTodo={props.onEditTodo}
+          onCancelEditTodo={editHandler}
+        />
+      )}
     </li>
   );
 };
