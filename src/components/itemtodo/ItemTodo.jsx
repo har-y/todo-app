@@ -1,25 +1,31 @@
+import { useState } from 'react';
+import ContentTodo from './ContentTodo';
+import EditTodo from './EditTodo';
+
 const ItemTodo = (props) => {
+  const [edit, setEdit] = useState(false);
+
   const deleteTodoHandler = () => {
     props.onDeleteTodo(props.id);
+  };
+
+  const editHandler = () => {
+    setEdit((prev) => {
+      return !prev;
+    });
   };
 
   return (
     <ul className="w-full pt-5">
       <li className="flex w-full justify-between">
-        <div className="ml-2 mr-5 flex-auto border-b-2 border-neutral-100 border-opacity-100 py-2 dark:border-opacity-50">
-          <p>{props.content}</p>
-        </div>
-        <div className="flex-none space-x-2">
-          <button className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black">
-            edit
-          </button>
-          <button
-            className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black"
-            onClick={deleteTodoHandler}
-          >
-            delete
-          </button>
-        </div>
+        {!edit && (
+          <ContentTodo
+            content={props.content}
+            onEditTodo={editHandler}
+            onDeleteTodo={deleteTodoHandler}
+          />
+        )}
+        {edit && <EditTodo onCancelEditTodo={editHandler} />}
       </li>
     </ul>
   );

@@ -13,7 +13,7 @@ function App() {
     });
   };
 
-  const deleTodoHandler = (ID) => {
+  const deleteTodoHandler = (ID) => {
     setUserData((prev) => {
       const updateTodo = prev.filter((arg) => {
         return arg.id !== ID;
@@ -27,7 +27,7 @@ function App() {
       <div className="my mx-auto flex max-w-md flex-col space-y-5 py-20 md:max-w-xl">
         <h1 className="mx-auto text-2xl font-bold">TODO LIST</h1>
         <NewTodo onAddTodo={addTodoHandler} />
-        <ListTodo data={userData} onDeleteTodo={deleTodoHandler} />
+        <ListTodo data={userData} onDeleteTodo={deleteTodoHandler} />
       </div>
     </div>
   );
