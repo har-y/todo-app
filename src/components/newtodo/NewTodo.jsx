@@ -27,6 +27,7 @@ const NewTodo = (props) => {
         placeholder="enter new todo"
         value={enterNewTodo}
         required
+        maxLength={40}
         onChange={inputChangeHandler}
       />
       <button

@@ -32,6 +32,7 @@ const EditTodo = (props) => {
           placeholder="enter new todo"
           value={enterUpdateTodo}
           required
+          maxLength={40}
           onChange={inputChangeHandler}
         />
 
