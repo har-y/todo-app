@@ -12,6 +12,8 @@ const ListTodo = (props) => {
             onAddTodo={props.onAddTodo}
             onEditTodo={props.onEditTodo}
             onDeleteTodo={props.onDeleteTodo}
+            isComplete={arg.isComplete}
+            onCompleteTodo={props.onCompleteTodo}
           />
         );
       })}

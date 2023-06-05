@@ -29,6 +29,16 @@ function App() {
     });
   };
 
+  const completeTodoHandler = (completeTodo) => {
+    setUserData((prev) => {
+      return prev.map((arg) => {
+        return arg.id === completeTodo.id
+          ? { ...arg, isComplete: completeTodo.isComplete }
+          : arg;
+      });
+    });
+  };
+
   return (
     <div className="min-h-screen bg-slate-400">
       <div className="my mx-auto flex max-w-md flex-col space-y-5 py-20 md:max-w-xl">
@@ -38,6 +48,7 @@ function App() {
           data={userData}
           onEditTodo={editTodoHandler}
           onDeleteTodo={deleteTodoHandler}
+          onCompleteTodo={completeTodoHandler}
         />
       </div>
     </div>

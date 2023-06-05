@@ -19,9 +19,12 @@ const ItemTodo = (props) => {
     <li className="flex w-full justify-between">
       {!edit && (
         <ContentTodo
+          id={props.id}
           content={props.content}
           onEditTodo={editHandler}
           onDeleteTodo={deleteTodoHandler}
+          isComplete={props.isComplete}
+          onCompleteTodo={props.onCompleteTodo}
         />
       )}
       {edit && (
