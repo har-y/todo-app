@@ -2,17 +2,17 @@ import { useState } from 'react';
 
 const NewTodo = (props) => {
   const [enterNewTodo, setNewTodo] = useState('');
-  const [key, setKey] = useState(3);
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    props.onAddTodo({ id: key, text: enterNewTodo });
+    props.onAddTodo({
+      id: crypto.randomUUID(),
+      text: enterNewTodo,
+      completed: false,
+    });
 
     setNewTodo('');
-    setKey((prev) => {
-      return prev + 1;
-    });
   };
 
   const inputChangeHandler = (e) => {
