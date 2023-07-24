@@ -12,7 +12,10 @@ const EditTodo = (props) => {
   };
 
   const editTodoHandler = () => {
-    props.onEditTodo({ id: props.id, text: enterUpdateTodo });
+    props.onEditTodo({
+      ...props.todo,
+      text: enterUpdateTodo,
+    });
   };
 
   const submitHandler = (e) => {
