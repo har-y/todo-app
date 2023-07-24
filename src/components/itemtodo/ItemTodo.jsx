@@ -6,7 +6,7 @@ const ItemTodo = (props) => {
   const [edit, setEdit] = useState(false);
 
   const deleteTodoHandler = () => {
-    props.onDeleteTodo(props.id);
+    props.onDeleteTodo(props.todo.id);
   };
 
   const editHandler = () => {
@@ -19,17 +19,15 @@ const ItemTodo = (props) => {
     <li className="flex w-full justify-between">
       {!edit && (
         <ContentTodo
-          id={props.id}
-          content={props.content}
+          todo={props.todo}
           onEditTodo={editHandler}
           onDeleteTodo={deleteTodoHandler}
-          isComplete={props.isComplete}
           onCompleteTodo={props.onCompleteTodo}
         />
       )}
       {edit && (
         <EditTodo
-          id={props.id}
+          todo={props.todo}
           onEditTodo={props.onEditTodo}
           onCancelEditTodo={editHandler}
         />

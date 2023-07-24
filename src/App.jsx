@@ -33,7 +33,7 @@ function App() {
     setUserData((prev) => {
       return prev.map((arg) => {
         return arg.id === completeTodo.id
-          ? { ...arg, isComplete: completeTodo.isComplete }
+          ? { ...arg, completed: !arg.completed }
           : arg;
       });
     });

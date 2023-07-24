@@ -7,12 +7,10 @@ const ListTodo = (props) => {
         return (
           <ItemTodo
             key={arg.id}
-            id={arg.id}
-            content={arg.text}
+            todo={arg}
             onAddTodo={props.onAddTodo}
             onEditTodo={props.onEditTodo}
             onDeleteTodo={props.onDeleteTodo}
-            isComplete={arg.isComplete}
             onCompleteTodo={props.onCompleteTodo}
           />
         );
