@@ -11,7 +11,7 @@ const todoData = [
   },
   {
     id: '0da7c889-c9ea-42fe-a9b5-50b09fe4e127',
-    text: 'lorem2 lorem2',
+    text: 'lorem3 lorem3',
     completed: false,
   },
 ];
