@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import NewTodo from './components/newtodo/NewTodo';
 import ListTodo from './components/listtodo/ListTodo';
-import todoData from './assets/data/todo-data';
+import todoData from './data/todo-data';
 
 function App() {
   const [userData, setUserData] = useState(todoData);
