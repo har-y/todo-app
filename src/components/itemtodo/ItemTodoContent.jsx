@@ -27,7 +27,7 @@ const ItemTodoContent = (props) => {
       <div className="flex flex-none items-center space-x-2">
         <button
           className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black"
-          onClick={props.onEditTodo}
+          onClick={props.onShowEditTodo}
         >
           edit
         </button>

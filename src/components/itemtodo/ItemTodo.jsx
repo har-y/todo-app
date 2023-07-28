@@ -9,7 +9,7 @@ const ItemTodo = (props) => {
     props.onDeleteTodo(props.todo.id);
   };
 
-  const editHandler = () => {
+  const showEditHandler = () => {
     setEdit((prev) => {
       return !prev;
     });
@@ -20,7 +20,7 @@ const ItemTodo = (props) => {
       {!edit && (
         <ItemTodoContent
           todo={props.todo}
-          onEditTodo={editHandler}
+          onShowEditTodo={showEditHandler}
           onDeleteTodo={deleteTodoHandler}
           onCompleteTodo={props.onCompleteTodo}
         />
@@ -29,7 +29,7 @@ const ItemTodo = (props) => {
         <ItemTodoEdit
           todo={props.todo}
           onEditTodo={props.onEditTodo}
-          onCancelEditTodo={editHandler}
+          onCancelEditTodo={showEditHandler}
         />
       )}
     </li>
