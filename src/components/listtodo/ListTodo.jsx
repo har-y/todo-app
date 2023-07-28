@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import ItemTodo from '../itemtodo/ItemTodo';
+import ListTodoSortBy from './ListTodoSortBy';
 
 const ListTodo = (props) => {
   const [sortedBy, setSortedBy] = useState('input');
@@ -40,18 +41,11 @@ const ListTodo = (props) => {
           );
         })}
       </ul>
-      {!!props.data.length && (
-        <div className="w-16 border-b-2 border-neutral-100 border-opacity-50 py-2">
-          <select
-            className="w-16 rounded-lg"
-            value={sortedBy}
-            onChange={sortedByHandler}
-          >
-            <option value="text">text</option>
-            <option value="input">input</option>
-          </select>
-        </div>
-      )}
+      <ListTodoSortBy
+        data={props.data}
+        sortedBy={sortedBy}
+        onSorted={sortedByHandler}
+      />
     </React.Fragment>
   );
 };
