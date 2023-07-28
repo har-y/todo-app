@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const EditTodo = (props) => {
+const ItemTodoEdit = (props) => {
   const [enterUpdateTodo, setUpdateTodo] = useState('');
 
   const inputChangeHandler = (e) => {
@@ -59,4 +59,4 @@ const EditTodo = (props) => {
   );
 };
 
-export default EditTodo;
+export default ItemTodoEdit;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContentTodo = (props) => {
+const ItemTodoContent = (props) => {
   const deleteTodoHandler = () => {
     props.onDeleteTodo();
   };
@@ -42,4 +42,4 @@ const ContentTodo = (props) => {
   );
 };
 
-export default ContentTodo;
+export default ItemTodoContent;

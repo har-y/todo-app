@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ContentTodo from './ContentTodo';
-import EditTodo from './EditTodo';
+import ItemTodoContent from './ItemTodoContent';
+import ItemTodoEdit from './ItemTodoEdit';
 
 const ItemTodo = (props) => {
   const [edit, setEdit] = useState(false);
@@ -18,7 +18,7 @@ const ItemTodo = (props) => {
   return (
     <li className="flex w-full justify-between">
       {!edit && (
-        <ContentTodo
+        <ItemTodoContent
           todo={props.todo}
           onEditTodo={editHandler}
           onDeleteTodo={deleteTodoHandler}
@@ -26,7 +26,7 @@ const ItemTodo = (props) => {
         />
       )}
       {edit && (
-        <EditTodo
+        <ItemTodoEdit
           todo={props.todo}
           onEditTodo={props.onEditTodo}
           onCancelEditTodo={editHandler}
