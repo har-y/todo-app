@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import SvgIcon from '../utilstodo/SvgIcon';
+
 const NewTodo = (props) => {
   const [enterNewTodo, setNewTodo] = useState('');
 
@@ -34,7 +36,7 @@ const NewTodo = (props) => {
         type="submit"
         className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black"
       >
-        ADD
+        <SvgIcon svg={'add_svg'} />
       </button>
     </form>
   );

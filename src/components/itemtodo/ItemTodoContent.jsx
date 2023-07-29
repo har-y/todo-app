@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SvgIcon from '../utilstodo/SvgIcon';
+
 const ItemTodoContent = (props) => {
   const deleteTodoHandler = () => {
     props.onDeleteTodo();
@@ -26,16 +28,16 @@ const ItemTodoContent = (props) => {
       </div>
       <div className="flex flex-none items-center space-x-2">
         <button
-          className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black"
+          className="text-teal rounded  border-2  bg-white p-1 text-black hover:border-black"
           onClick={props.onShowEditTodo}
         >
-          edit
+          <SvgIcon svg={'edit_svg'} />
         </button>
         <button
-          className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black"
+          className="text-teal rounded  border-2  bg-white p-1 text-black hover:border-black"
           onClick={deleteTodoHandler}
         >
-          delete
+          <SvgIcon svg={'delete_svg'} />
         </button>
       </div>
     </React.Fragment>
