@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-row items-center justify-center bg-slate-400">
-      <div className="flex w-1/4 flex-col items-end space-y-5 rounded-md border-2 border-neutral-100 border-opacity-50 p-5 outline outline-2 outline-offset-4 outline-neutral-100/50">
+      <div className="flex min-w-fit flex-col items-end space-y-5 rounded-md border-2 border-neutral-100 border-opacity-50 p-5 outline outline-2 outline-offset-4 outline-neutral-100/50 md:w-1/4">
         <h1 className="mx-auto text-2xl font-bold text-neutral-200 drop-shadow-lg">
           ToDo App
         </h1>
