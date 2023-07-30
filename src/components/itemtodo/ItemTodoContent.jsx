@@ -28,13 +28,13 @@ const ItemTodoContent = (props) => {
       </div>
       <div className="flex flex-none items-center space-x-2">
         <button
-          className="text-teal rounded  border-2  bg-white p-1 text-black hover:border-black"
+          className="text-teal cursor-pointer rounded border-2 bg-white p-1 text-black hover:border-black"
           onClick={props.onShowEditTodo}
         >
           <SvgIcon svg={'edit_svg'} />
         </button>
         <button
-          className="text-teal rounded  border-2  bg-white p-1 text-black hover:border-black"
+          className="text-teal cursor-pointer rounded border-2 bg-white p-1 text-black hover:border-black"
           onClick={deleteTodoHandler}
         >
           <SvgIcon svg={'delete_svg'} />

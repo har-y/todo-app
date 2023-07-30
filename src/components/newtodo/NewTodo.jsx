@@ -5,20 +5,23 @@ import SvgIcon from '../utilstodo/SvgIcon';
 const NewTodo = (props) => {
   const [enterNewTodo, setNewTodo] = useState('');
 
-  const submitHandler = (e) => {
-    e.preventDefault();
+  const inputChangeHandler = (e) => {
+    setNewTodo(e.target.value);
+  };
 
+  const addTodoHandler = () => {
     props.onAddTodo({
       id: crypto.randomUUID(),
       text: enterNewTodo,
       completed: false,
     });
-
-    setNewTodo('');
   };
 
-  const inputChangeHandler = (e) => {
-    setNewTodo(e.target.value);
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    addTodoHandler();
+    setNewTodo('');
   };
 
   return (
@@ -34,7 +37,7 @@ const NewTodo = (props) => {
       />
       <button
         type="submit"
-        className="text-teal rounded  border-2  bg-white p-2 text-black hover:border-black"
+        className="text-teal cursor-pointer rounded border-2 bg-white p-2 text-black hover:border-black"
       >
         <SvgIcon svg={'add_svg'} />
       </button>
