@@ -1,16 +1,16 @@
 const todoData = [
   {
-    id: 'b4e73bf2-97e4-4ae1-a3c7-bc192304e034',
+    id: 'VvzUQKLWry',
     text: 'lorem1 lorem1',
     completed: false,
   },
   {
-    id: 'f9d4d650-d32e-4a06-9d87-760155e2bdf5',
+    id: 'IGLM8OdP0z',
     text: 'lorem2 lorem2',
     completed: true,
   },
   {
-    id: '0da7c889-c9ea-42fe-a9b5-50b09fe4e127',
+    id: 'T5nDwm4D0k',
     text: 'lorem3 lorem3',
     completed: false,
   },

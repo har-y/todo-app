@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { nanoid } from 'nanoid';
 
 import SvgIcon from '../utilstodo/SvgIcon';
 
@@ -11,7 +12,7 @@ const NewTodo = (props) => {
 
   const addTodoHandler = () => {
     props.onAddTodo({
-      id: crypto.randomUUID(),
+      id: nanoid(10),
       text: enterNewTodo,
       completed: false,
     });
