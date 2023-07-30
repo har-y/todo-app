@@ -6,7 +6,7 @@ const ListTodoSortBy = (props) => {
       {!!props.data.length && (
         <div className="w-16 border-b-2 border-neutral-100 border-opacity-50 py-2">
           <select
-            className="w-16 rounded-lg"
+            className="w-16 rounded-lg text-center"
             value={props.sortedBy}
             onChange={props.onSorted}
           >

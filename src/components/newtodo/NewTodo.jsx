@@ -38,7 +38,7 @@ const NewTodo = (props) => {
       />
       <button
         type="submit"
-        className="text-teal cursor-pointer rounded border-2 bg-white p-2 text-black hover:border-black"
+        className="cursor-pointer rounded border-2 bg-white p-2 hover:border-black"
       >
         <SvgIcon svg={'add_svg'} />
       </button>
