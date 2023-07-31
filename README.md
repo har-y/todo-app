@@ -29,7 +29,7 @@ $ git clone https://github.com/har-y/todo-app.git
 **install dependencies. make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.**
 
 ```
-$ npm install or yarn
+$ npm install or yarn install
 ```
 
 **run it**
