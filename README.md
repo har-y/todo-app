@@ -7,7 +7,7 @@
 
 ## Screenshots
 
-![todo_app](./assets/img/todo_app.jpg)
+![todo_app](./src/assets/img/todo_app.jpg)
 
 ## Technologies
 
