@@ -2,7 +2,7 @@
 
 > app that allows users to view/add/edit/delete and sort tasks they want to work on, and also mark tasks as complete.<br/>
 
-> todo-app (work in progress..) - [_click_](https://github.com/har-y/todo-app). <br/>
+> todo-app - [_click_](https://project-todo-app.vercel.app/). <br/>
 > project menagment - [_click_](https://trello.com/b/aS9HtQPf/todo-app).
 
 ## Screenshots
@@ -14,6 +14,8 @@
 `Vite`
 `ReactJS`
 `JavaScript`
+`HTML`
+`CSS`
 `Tailwind`
 
 ## Setup
